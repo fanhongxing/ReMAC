@@ -15,7 +15,7 @@ from fastapi.responses import JSONResponse
 
 # Depends on X-SAM code
 # Requires setting PYTHONPATH to point to the X-SAM source directory before running, for example:
-# export PYTHONPATH=/data/zhaoshuyu/X-SAM/X-SAM-main/xsam:$PYTHONPATH
+# export PYTHONPATH=/path/to/X-SAM/xsam:$PYTHONPATH
 
 from mmengine.config import Config
 from xsam.demo.demo import XSamDemo  # type: ignore
@@ -24,13 +24,13 @@ from xsam.utils.logging import print_log  # type: ignore
 """
 Startup method (example):
 conda activate xsam
-export PYTHONPATH=/data/zhaoshuyu/X-SAM/X-SAM-main/xsam:$PYTHONPATH
+export PYTHONPATH=/path/to/X-SAM/xsam:$PYTHONPATH
 export TRANSFORMERS_OFFLINE=0
 python xsam_api_server.py \
-  --config /data/zhaoshuyu/X-SAM/X-SAM-main/xsam/xsam/configs/xsam/phi3_mini_4k_instruct_siglip2_so400m_p14_384/s3_mixed_finetune/xsam_phi3_mini_4k_instruct_siglip2_so400m_p14_384_sam_large_m2f_gpu16_mixed_finetune.py \
-  --workdir /data/zhaoshuyu/X-SAM/X-SAM-main/inits/X-SAM/s3_mixed_finetune/xsam_phi3_mini_4k_instruct_siglip2_so400m_p14_384_sam_large_m2f_gpu16_mixed_finetune \
+  --config /path/to/X-SAM/xsam/configs/xsam/phi3_mini_4k_instruct_siglip2_so400m_p14_384/s3_mixed_finetune/xsam_phi3_mini_4k_instruct_siglip2_so400m_p14_384_sam_large_m2f_gpu16_mixed_finetune.py \
+  --workdir /path/to/X-SAM/inits/X-SAM/s3_mixed_finetune/xsam_phi3_mini_4k_instruct_siglip2_so400m_p14_384_sam_large_m2f_gpu16_mixed_finetune \
   --ckpt latest
-Default listens on 0.0.0.0:8062
+Default listens on 0.0.0.0:8042
 """
 
 # ---------------------------
