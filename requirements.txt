@@ -1,0 +1,13 @@
+# NOTE: This repo requires Python >= 3.10.
+# - The codebase uses PEP604 union types (e.g. `str | None`).
+# - Dependencies below are matched to the 'diffusers' conda environment.
+
+## Core (main pipeline + utils)
+requests>=2.32.3
+pillow>=10.2.0
+numpy>=1.26.4
+tqdm>=4.67.1
+
+## LLM / evaluation clients
+openai>=1.61.1
+google-generativeai>=0.8.5
