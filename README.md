@@ -37,7 +37,7 @@ You need to set up and run the following three API servers. It is recommended to
     conda activate xsam
     export PYTHONPATH=/path/to/X-SAM:$PYTHONPATH
     
-    # Run the server (Default port: 8062)
+    # Run the server (Default port: 8042)
     python api_server_xsam.py
     ```
 
